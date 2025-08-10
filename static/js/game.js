@@ -8,6 +8,19 @@ let rating = 5;
 let ratingDebuff = 1;
 let maxRating = 5;
 
+console.log("Script loaded!"); // Должен появиться в консоли
+const startBtn = document.querySelector('.start-btn');
+if (startBtn) {
+  startBtn.addEventListener('click', () => {
+    // Ваш код
+  });
+} else {
+  console.error("Кнопка .start-btn не найдена!");
+}
+
+document.querySelector('.start-btn')?.addEventListener('click', () => {
+  console.log("Button clicked!"); // Проверьте, появляется ли это сообщение
+});
 // Персонал
 const staff = {
     seller: { count: 0, attraction: 0.2, cost: 150, income: 3 },
@@ -202,4 +215,5 @@ themeToggle.addEventListener('click', () => {
 
 // Запуск игры
 loadTheme();
+
 loadGame();
